@@ -31,3 +31,16 @@ function divide(num1, num2){
         divide(num1, num2)
     }
  }
+
+function displaySth(e){
+    let display = document.querySelector("#display")
+    display.textContent += e.target.textContent
+    let curr_num = display.textContent 
+
+
+}
+ const buttons = document.querySelectorAll("button")
+    buttons.forEach((button)=>{
+    button.addEventListener("click",displaySth)
+ })
+
