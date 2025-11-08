@@ -1,17 +1,17 @@
 function add(num1, num2){
-    return num1 + num2
+    return Math.round((num1 + num2)*100)/100
 }
 
 function subtract(num1,num2){
-    return num1 -num2
+    return Math.round((num1 -num2)*100)/100
 }
 
 function multiply(num1, num2){
-    return num1 * num2
+    return Math.round((num1 * num2)*100)/100
 }
 
 function divide(num1, num2){
-    return num1/num2
+    return Math.round((num1/num2)*100)/100
 }
  let num1;
  let num2;
@@ -30,6 +30,9 @@ function divide(num1, num2){
         return multiply(num1, num2)
     }
     else if (operator === "÷"){
+        if(num2 ===0){
+            return "Error, do not divide by 0"
+        }
         return divide(num1, num2)
     }
  }
@@ -48,19 +51,46 @@ function saveNumOp(curr){
     let display = document.querySelector("#display")
     
     if (curr === "+" || curr === "-" || curr ==="×" || curr === "÷"){
-        num1 = display.textContent;
-        operator = curr;
-        display.textContent =""
+        if (num1 && operator && display.textContent!=""){
+            num2 = display.textContent
+            const result = operate(operator, num1, num2)
+    
+            num1 = result
+            operator = curr
+            num2 = undefined
+            display.textContent = result
+        }
+        else if(num1 && operator && display.textContent==""){
+            operator = curr
+            return
+        }
+        else{
+            num1 = display.textContent;
+            operator = curr;
+            display.textContent =""
+        }
     }
     else if(curr === "="){
         num2 = display.textContent
         display.textContent =""
         const result = operate(operator, num1, num2)
         display.textContent = result
-    }
-    else {
-        display.textContent += curr;
-        
 
+        num1 = result
+        num2 = undefined
+        operator = undefined
+    }
+    else if(curr =="AC"){
+        display.textContent=""
+        num1 = undefined
+        num2 = undefined
+        operator = undefined
+    }
+
+    else {
+        if(num1){
+            display.textContent=""
+        }
+        display.textContent += curr;
     }
 }
