@@ -9,7 +9,7 @@ It was created as a personal learning exercise to combine everything I’ve lear
 - Perform basic arithmetic operations: addition, subtraction, multiplication, and division  
 - Clear and backspace functions  
 - Responsive layout 
-- Clean, vintage-inspired design  
+- Clean, modern design  
 
 
 ## 🛠️ Technologies Used
