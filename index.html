@@ -4,35 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="../MyCalculator/style.css">
 </head>
 <body>
     <h1>My Calculator</h1>
-    <div id ="display"></div>
-    <div>
-        <button id ="btn7">7</button>
-        <button id ="btn8">8</button>
-        <button id ="btn9">9</button>
-        <button id ="btnDiv">÷</button>
+    <div id = "container">
+        <div id ="display"></div>
+        <div class="row" id=""r1>
+            <button id ="btn7">7</button>
+            <button id ="btn8">8</button>
+            <button id ="btn9">9</button>
+            <button id ="btnDiv">÷</button>
+        </div>
 
-        <button id ="btn4">4</button>
-        <button id ="btn5">5</button>
-        <button id ="btn6">6</button>
-        <button id ="btnMul">×</button>
+        <div class="row" id ="r2">
+            <button id ="btn4">4</button>
+            <button id ="btn5">5</button>
+            <button id ="btn6">6</button>
+            <button id ="btnMul">×</button>
+        </div>
 
-        <button id ="btn3">3</button>
-        <button id ="btn2">2</button>
-        <button id ="btn1">1</button>
-        <button id ="btnSub">-</button>
+        <div class="row" id=""r3>
+            <button id ="btn3">3</button>
+            <button id ="btn2">2</button>
+            <button id ="btn1">1</button>
+            <button id ="btnSub">-</button>
+        </div>
 
-        <button id ="btn0">0</button>
-        <button id ="btnDot">.</button>
-        <button id ="btnEqual">=</button>
-        <button id ="btnAdd">+</button>
+        <div class="row" id=""r4>
+            <button id ="btn0">0</button>
+            <button id ="btnDot">.</button>
+            <button id ="btnEqual">=</button>
+            <button id ="btnAdd">+</button>
+        </div>
 
-        <button id = "clear">AC</button>
+        <div class="row">
+            <button class = "row" id = "clear">AC</button>
+        </div>
 
-        <script src="../MyCalculator/script.js"></script>
     </div>
+        
+        <script src="../MyCalculator/script.js"></script>
+
 
 
     
