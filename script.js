@@ -1,25 +1,25 @@
 function add(num1, num2){
-    return Math.round((num1 + num2)*100)/100
+    return num1 + num2
 }
 
 function subtract(num1,num2){
-    return Math.round((num1 -num2)*100)/100
+    return num1 -num2
 }
 
 function multiply(num1, num2){
-    return Math.round((num1 * num2)*100)/100
+    return num1 * num2
 }
 
 function divide(num1, num2){
-    return Math.round((num1/num2)*100)/100
+    return num1/num2
 }
  let num1;
  let num2;
  let operator;
 
  function operate(operator, number1, number2){
-    let num1 =parseInt(number1)
-    let num2 =parseInt(number2)
+    num1 =parseFloat(number1)
+    num2 =parseFloat(number2)
     if (operator == "+"){
         return add(num1, num2)
     }

@@ -1,6 +1,7 @@
 body{
     background: linear-gradient(to right, rgb(117, 84, 129), rgb(32, 11, 41));
     color:  rgb(224, 214, 234);
+    font-family: "Zalando Sans Expanded";
 }
 #container{
     background-color: rgb(245, 248, 248);
@@ -24,19 +25,24 @@ button{
     background-color: rgb(224, 214, 234);
     border-color: rgb(224, 214, 234);
     margin: 5px;
-    border-radius: 3ch;
+    border-radius: 2ch;
+    font-size: 24px;
+    
 
 }
 
 #display{
+    display: flex;
+    align-items: center;
+    justify-content: end;
     flex:1;
     height: 80px;
     border: 1px solid rgb(117, 84, 129);
-    text-align: right;
     margin: 30px 0px;
-    border-radius: 3ch;
+    border-radius: 1ch;
     background-color: rgb(117, 84, 129);
     color: white;
+    font-size: 36px;
 
 }
 
